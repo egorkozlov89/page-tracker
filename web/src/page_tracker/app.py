@@ -20,7 +20,7 @@ def index():
         page_views = redis().incr("page_views")
     except RedisError:
         app.logger.exception("Redis Error")
-        return "Someting went wrong.", 500
+        return "Someting went wrong", 500
     else:
         return f"This page has been seen {page_views} times"
 

@@ -18,3 +18,5 @@ jobs:
       - name: Run end-to-end-tests
         run: >
           docker compose --profile testing up
+          --build
+          --exit-code-from test-service
